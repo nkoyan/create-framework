@@ -6,14 +6,6 @@ use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Route;
 use Symfony\Component\Routing\RouteCollection;
 
-function is_leap_year($year = null) {
-    if (null === $year) {
-        $year = date('Y');
-    }
-
-    return 0 === $year % 400 || (0 === $year % 4 && 0 !== $year % 100);
-}
-
 function render_template($request)
 {
     extract($request->attributes->all(), EXTR_SKIP);
